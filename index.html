@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/moon.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+            <h1>CSS METHODOLOGIES</h1>
+            <h3>OOCSS</h3>
+            <h3>SMACSS</h3>
+            <h3>BEM</h3>
+        </section>
+        <section>
+			<h2>Comparisions</h2>
+			<ul>
+				<li>Philosophy</li>
+				<li>Flexibility</li>
+				<li>Maintenance</li>
+				<li>Learning Curve</li>
+				<li>Use Cases</li>
+			</ul>
+		</section>
+		<section>
+			<h2>Philosophy</h2>
+			<table style=" left:-230px; position: relative; width: 1500px; border-radius: 50px; border: 1px solid #93a1a1;">
+				<thead>
+					<tr>
+						<th>OOCSS</th>
+						<th>SMACSS</th>
+						<th>BEM</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Encourages the creation of reusable and modular CSS components by separating structure and skin.</td>
+						<td>Emphasizes the categorization of CSS rules into five categories to improve maintainability and scalability.</td>
+						<td>Focuses on creating independent and reusable blocks, elements, and modifiers to enhance code modularity.</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section>
+			<h2>Flexibility</h2>
+			<table style=" left:-230px; position: relative; width: 1500px; border-radius: 50px; border: 1px solid #93a1a1;">
+				<thead>
+					<tr>
+						<th>OOCSS</th>
+						<th>SMACSS</th>
+						<th>BEM</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Provides flexibility by allowing developers to reuse styles across different components.</td>
+						<td>Offers flexibility in terms of how categories are applied, allowing developers to adapt the methodology to their project's needs.</td>
+						<td>Ensures flexibility through independent and encapsulated blocks, making it easy to modify and extend styles without affecting other components.</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section>
+			<h2>Maintenance</h2>
+			<table style=" left:-230px; position: relative; width: 1500px; border-radius: 50px; border: 1px solid #93a1a1;">
+				<thead>
+					<tr>
+						<th>OOCSS</th>
+						<th>SMACSS</th>
+						<th>BEM</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Can lead to increased maintenance if not managed properly due to the generic nature of classes.</td>
+						<td>Aids in maintainability by providing a clear structure and organization of styles. Requires adherence to the methodology for optimal results.</td>
+						<td>Promotes easy maintenance by creating self-contained and isolated components, reducing the risk of style conflicts.</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section>
+			<h2>Learning Curve</h2>
+			<table style=" left:-230px; position: relative; width: 1500px; border-radius: 50px; border: 1px solid #93a1a1;">
+				<thead>
+					<tr>
+						<th>OOCSS</th>
+						<th>SMACSS</th>
+						<th>BEM</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Has a relatively low learning curve, as it focuses on separating structure and skin.</td>
+						<td>Moderate learning curve, as developers need to understand and adhere to the five categories of styles.</td>
+						<td>Moderate learning curve, especially for understanding the naming conventions and the relationship between Blocks, Elements, and Modifiers.</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section>
+			<h2>Use Cases</h2>
+			<table style=" left:-230px; position: relative; width: 1500px; border-radius: 50px; border: 1px solid #93a1a1;">
+				<thead>
+					<tr>
+						<th>OOCSS</th>
+						<th>SMACSS</th>
+						<th>BEM</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Suitable for projects with a need for a balance between reusability and simplicity.</td>
+						<td>Ideal for larger projects where a clear and scalable structure is crucial.</td>
+						<td>Well-suited for modular and scalable designs, especially in large and complex web applications.</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section>
+			<h2>Jacobo's Experience</h2>
+			<pre style="left:-230px; position: relative; width: 1500px; width: 1500px;"><code data-line-numbers="2, 3, 6, 7">
+				<form class="form form--register">
+					<input class="form__input" type="text" placeholder="name" />
+					<input class="form__input" type="password" placeholder="password" />
+					<input class="form__input" type="text" placeholder="email address" />
+					<button class="form__button--blue">create</button>
+					<p class="form__message">Already registered? <a href="#" class="form__message--help">Sign In</a></p>
+				</form>
+			</code></pre>
+		</section>
+		<section>
+			<h2>Jacobo's Experience</h2>
+			<pre style="left:-230px; position: relative; width: 1500px; width: 1500px;"><code data-line-numbers="2, 6, 12, 16, 20, 24">
+				.form {
+					text-align: center;
+				  }
+
+				  .form__message {
+					margin: 15px 0 0;
+					color: #b3b3b3;
+					font-size: 12px;
+				  }
+
+				  .form--register {
+					display: none;
+				  }
+
+				  .form__button--green {
+					background: #4caf50;
+				  }
+
+				  .form__button--blue {
+					background: #101a57;
+				  }
+
+				  .form__input {
+					outline: 0;
+					background: #f2f2f2;
+					width: 100%;
+					border: 0;
+					margin: 0 0 15px;
+					padding: 15px;
+					box-sizing: border-box;
+					font-size: 14px;
+				  }
+			</code></pre>
+		</section>
+		<section>
+			<h2>Juan Pablo's Experience</h2>
+			<pre style="left:-230px; position: relative; width: 1500px; width: 1500px;"><code data-line-numbers="4, 5, 7">
+				<form class="register-form">
+					<input type="text" placeholder="name" class="register-form__input"/>
+					<input type="password" placeholder="password" class="register-form__input"/>
+					<input type="text" placeholder="email address" class="register-form__input"/>
+					<button class="register-form__button">create</button>
+					<p class="register-form__message">Already registered?
+						<a  class="register-form__link" href="#">Sign In</a>
+					</p>
+				</form>
+			</code></pre>
+		</section>
+		</section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
